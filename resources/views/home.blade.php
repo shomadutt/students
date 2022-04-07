@@ -22,6 +22,7 @@
                 @if (Route::has('login'))
                 <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
                     @auth
+
                     <li class="nav-item">
                         <a href="{{ url('/dashboard') }}">Dashboard</a>
                     </li>
@@ -42,7 +43,7 @@
     </nav>
 
 
-    <div id="image"></div>
+    <div id="image" class="responsive"></div>
 
 
 

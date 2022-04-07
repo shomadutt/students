@@ -6,6 +6,7 @@
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
+    object-fit: cover;
 }
 
 nav {
@@ -27,4 +28,10 @@ li {
 .navbar-nav a {
     color: white;
     text-decoration: none;
+}
+
+#searchBar {
+    margin-top: 3%;
+    margin-left: 30%;
+    margin-right: 30%;
 }
