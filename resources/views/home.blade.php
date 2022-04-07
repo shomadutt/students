@@ -19,18 +19,24 @@
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
-                <!-- <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                @if (Route::has('login'))
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    @auth
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="#">Home</a>
+                        <a href="{{ url('/dashboard') }}">Dashboard</a>
                     </li>
+                    @else
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Link</a>
+                        <a href="{{ route('login') }}">Log in</a>
                     </li>
+                    @if (Route::has('register'))
                     <li class="nav-item">
-                        <a class="nav-link disabled" href="#" tabindex="-1" aria-disabled="true">Disabled</a>
+                        <a href="{{ route('register') }}">Register</a>
                     </li>
-                </ul> -->
-
+                    @endif
+                    @endauth
+                </ul>
+                @endif
             </div>
         </div>
     </nav>
