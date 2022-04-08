@@ -14,9 +14,11 @@ use App\Http\Controllers\HomeController;
 |
 */
 
-
-
 Route::get('/', [HomeController::class, 'index']);
+
+Route::get('/home', [HomeController::class, 'index']);
+
+Route::get('/dashboard', [HomeController::class, 'displayAll']);
 
 Route::middleware([
     'auth:sanctum',

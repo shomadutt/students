@@ -56,3 +56,11 @@ li {
 #noAccount {
     font-weight: bold;
 }
+
+#appTable {
+    margin-top: 5%;
+}
+
+table th {
+    padding: 30%;
+}
