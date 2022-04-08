@@ -35,3 +35,24 @@ li {
     margin-left: 30%;
     margin-right: 30%;
 }
+
+#forgotten {
+    text-align: end;
+    text-decoration: none !important;
+}
+
+#loginButton,
+#registerButton,
+#forgetButton {
+    width: 100%;
+}
+
+#newAccount,
+#alreadyRegistered {
+    text-align: center;
+    text-decoration: none !important;
+}
+
+#noAccount {
+    font-weight: bold;
+}
