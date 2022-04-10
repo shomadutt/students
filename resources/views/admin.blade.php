@@ -18,67 +18,70 @@
 
 <body>
 
-    <nav class="navbar navbar-expand-lg navbar-light">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Student Database</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+    <div class="min-h-screen bg-gray-100">
 
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <form method="POST" action="{{ route('logout') }}" x-data>
-                        @csrf
 
-                        <x-jet-dropdown-link href="{{ route('logout') }}" @click.prevent="$root.submit();">
-                            Log out
-                        </x-jet-dropdown-link>
-                    </form>
 
-                </ul>
 
+        <nav x-data="{ open: false }" class="navbar navbar-expand-lg navbar-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#">Student Database</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+
+                        @livewire('navigation-menu')
+
+
+                    </ul>
+
+                </div>
             </div>
+        </nav>
+
+        <div id="searchBar" class="form-outline">
+            <input type="search" id="form1" class="form-control" placeholder="Type query" aria-label="Search" />
         </div>
-    </nav>
 
-    <div id="searchBar" class="form-outline">
-        <input type="search" id="form1" class="form-control" placeholder="Type query" aria-label="Search" />
+
+        <div id="appTable">
+
+            <table class=" table table-striped">
+
+                <tr>
+                    <th>Name</th>
+                    <th>Address</th>
+                    <th>Phone no.</th>
+                    <th>Email</th>
+                    <th>Year</th>
+                    <th></th>
+                    <th></th>
+                </tr>
+
+
+
+                <tr>
+
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+                    <td></td>
+
+                </tr>
+
+
+        </div>
+
+        </table>
+
+
     </div>
-
-    <div id="appTable">
-
-        <table class=" table table-striped">
-
-            <tr>
-                <th>Name</th>
-                <th>Address</th>
-                <th>Phone no.</th>
-                <th>Email</th>
-                <th>Year</th>
-                <th></th>
-                <th></th>
-            </tr>
-
-
-            <tr>
-
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-                <td></td>
-
-            </tr>
-
-
-    </div>
-
-    </table>
-
-
-
     @stack('modals')
 
     @livewireScripts
