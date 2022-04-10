@@ -18,14 +18,15 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/home', [HomeController::class, 'index']);
 
-Route::get('/dashboard', [HomeController::class, 'displayAll']);
+Route::get('/admin', [HomeController::class, 'displayAll']);
+
 
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/dashboard', function () {
-        return view('dashboard');
-    })->name('dashboard');
+    Route::get('/admin', function () {
+        return view('admin');
+    })->name('admin');
 });

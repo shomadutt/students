@@ -25,7 +25,7 @@
                     @auth
 
                     <li class="nav-item">
-                        <a href="{{ url('/dashboard') }}">Dashboard</a>
+                        <a href="{{ url('/admin') }}">Dashboard</a>
                     </li>
                     @else
                     <li class="nav-item">
