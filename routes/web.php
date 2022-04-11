@@ -19,7 +19,9 @@ Route::get('/', [HomeController::class, 'index']);
 
 Route::get('/home', [HomeController::class, 'index']);
 
-Route::get('/admin', [AdminController::class, 'displayAll']);
+Route::get('/dashboard', [AdminController::class, 'displayAll']);
+
+
 
 
 Route::middleware([
@@ -27,7 +29,7 @@ Route::middleware([
     config('jetstream.auth_session'),
     'verified'
 ])->group(function () {
-    Route::get('/admin', function () {
-        return view('admin');
-    })->name('admin');
+    Route::get('/dashboard', function () {
+        return view('dashboard');
+    })->name('dashboard');
 });

@@ -5,10 +5,9 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="csrf-token" content="{{ csrf_token() }}">
-    <!-- <link href="{{'../../../../bootstrap-5.0.2-dist/css/bootstrap.min.css'}}" rel="stylesheet"> -->
     <link href="{{asset('bootstrap-5.0.2-dist/css/bootstrap.min.css')}}" rel="stylesheet">
-    <!-- <link href="{{'../../../../css/students.css'}}" rel="stylesheet"> -->
     <link href="{{ asset('css/students.css') }}" rel="stylesheet">
+
     <title>Student Database</title>
 
     <!-- Fonts -->
@@ -29,6 +28,7 @@
     <div class="min-h-screen bg-gray-100">
         @livewire('navigation-menu')
 
+
         <!-- Page Heading -->
         @if (isset($header))
         <header class="bg-white shadow">
@@ -38,10 +38,11 @@
         </header>
         @endif
 
+
+
         <!-- Page Content -->
         <main>
-
-
+            {{ $slot }}
 
         </main>
     </div>
@@ -49,6 +50,8 @@
     @stack('modals')
 
     @livewireScripts
+
+    <script src="{{'../../bootstrap-5.0.2-dist/css/bootstrap.min.js'}}"></script>
 </body>
 
 </html>
